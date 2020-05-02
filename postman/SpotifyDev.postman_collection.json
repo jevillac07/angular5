@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "ce179f2e-d6fe-4fb3-9597-9dd3a8da0c78",
+		"name": "SpotifyDev",
+		"description": "API for Spotify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "My token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "86196719252640beb9b9c2ec31d0ab9e",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "f1f2398d8e314f25b540145e3e2d679f",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://accounts.spotify.com/api/token",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New realeses 50",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"name": "Content-Type",
+						"value": "Bearer BQD1cIkh1Lz5aOAIigkmKd67c3A0rjCYplHkqpvUcHGPdvRhTyv_iO_as7Oey28bCrVufV160UthVVOv-rM",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "Bearer BQD1cIkh1Lz5aOAIigkmKd67c3A0rjCYplHkqpvUcHGPdvRhTyv_iO_as7Oey28bCrVufV160UthVVOv-rM"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/browse/new-releases?limit=50",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"browse",
+						"new-releases"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
