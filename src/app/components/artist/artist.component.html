@@ -13,9 +13,10 @@
             </button>
     </div>
 </div>
-<div class="row m-3">
+
+<div class="row m-5">
     <div class="col">
-        <table class="table">
+        <table class="table text-light">
             <thead>
                 <tr>
                     <td>Foto</td>
@@ -26,10 +27,13 @@
             </thead>
             <tbody>
                 <tr *ngFor="let topTrack of topTracks">
-                    <td></td>
+                    <td><img [src]="topTrack.album.images | noimage" class="img-thumb"></td>
                     <td>{{ topTrack.album.name }}</td>
                     <td>{{ topTrack.name }}</td>
-                    <td></td>
+                    <td>
+                        <!-- <audio [src]="topTrack.preview_url" controls></audio> -->
+                        <iframe [src]="topTrack.id | domseguro" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </td>
                 </tr>
             </tbody>
         </table>

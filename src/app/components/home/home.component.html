@@ -1,4 +1,5 @@
 <app-loading *ngIf="loading"></app-loading>
+<app-notification *ngIf="notification" [notificationMessage]="messageService"></app-notification>
 
 <app-card [items]="nuevasCanciones">
 </app-card>

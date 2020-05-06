@@ -14,6 +14,8 @@ import { ROUTES } from './app.routes';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { CardComponent } from './components/shared/card/card.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { NotificationComponent } from './components/shared/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +25,10 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     ArtistComponent,
     NavbarComponent,
     NoimagePipe,
+    DomseguroPipe,
     CardComponent,
-    LoadingComponent
+    LoadingComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
