@@ -55,23 +55,23 @@
 			"response": []
 		},
 		{
-			"name": "New realeses 50",
+			"name": "New realeses",
 			"request": {
 				"method": "GET",
 				"header": [
 					{
 						"key": "Authorization",
 						"name": "Content-Type",
-						"value": "Bearer BQD1cIkh1Lz5aOAIigkmKd67c3A0rjCYplHkqpvUcHGPdvRhTyv_iO_as7Oey28bCrVufV160UthVVOv-rM",
+						"value": "Bearer BQAtek8TyD2HaCQ0qrNDC97s1m7nkvkRCx-9kOOOXufeLpLJ4FeTvf8dFt8I8s1lShH4PTF8HGX-B-yjLGU",
 						"type": "text"
 					},
 					{
 						"key": "Content-Type",
-						"value": "Bearer BQD1cIkh1Lz5aOAIigkmKd67c3A0rjCYplHkqpvUcHGPdvRhTyv_iO_as7Oey28bCrVufV160UthVVOv-rM"
+						"value": "Bearer BQAtek8TyD2HaCQ0qrNDC97s1m7nkvkRCx-9kOOOXufeLpLJ4FeTvf8dFt8I8s1lShH4PTF8HGX-B-yjLGU"
 					}
 				],
 				"url": {
-					"raw": "https://api.spotify.com/v1/browse/new-releases?limit=50",
+					"raw": "https://api.spotify.com/v1/browse/new-releases?limit=10",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -86,7 +86,111 @@
 					"query": [
 						{
 							"key": "limit",
-							"value": "50"
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search for an item",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer BQCaHmKnAzI5wjdq5jmbCerKF1d7dy2WvY7XIlJ0lGTYEwa_eP3HwuHBg0XoHVtYoDb0vvPxyHQFtnMxnAc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/search?q=ed&type=artist&limit=15",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "ed"
+						},
+						{
+							"key": "type",
+							"value": "artist"
+						},
+						{
+							"key": "limit",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get an artist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer BQAtek8TyD2HaCQ0qrNDC97s1m7nkvkRCx-9kOOOXufeLpLJ4FeTvf8dFt8I8s1lShH4PTF8HGX-B-yjLGU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"3TVXtAsR1Inumwj472S9r4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top tracks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer BQAtek8TyD2HaCQ0qrNDC97s1m7nkvkRCx-9kOOOXufeLpLJ4FeTvf8dFt8I8s1lShH4PTF8HGX-B-yjLGU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4/top-tracks?country=es",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"3TVXtAsR1Inumwj472S9r4",
+						"top-tracks"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "es"
 						}
 					]
 				}
